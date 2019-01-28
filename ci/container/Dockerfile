@@ -6,13 +6,13 @@ RUN apt-get update -y && \
     apt-get install -y python-pip python-dev
 
 # We copy the requirements.txt this way to leverage Docker cache
-COPY ./requirements.txt /app/requirements.txt
+COPY ../../requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-COPY . /app
+COPY ../../ /app
 
 ENTRYPOINT [ "python" ]
 

@@ -1,0 +1,12 @@
+{
+  "imageGroup": "ci",
+  "imageName": "sample-api",
+  "jenkinsDeployJob": "deploy_sample_api",
+  "buildNode": "dev-build",
+  "containerRegistry": "",
+  "unitTestCmd": "pytest  --junit=unitpytests.xml --cov=/ust/lib/python3.4/site-packages/app --cov-report=html",
+  "unitTestOutfile": "unitpytests.xml",
+  "unitTestFailThreshold": "0",
+  "unitTestCoverageOutfile": "index.html",
+  "unitTestCoverageOutdir": "htmlcov"
+}
