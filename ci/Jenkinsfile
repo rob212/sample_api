@@ -1,5 +1,36 @@
 #!/usr/bin/env groovy
 
+// Declarative //
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building Declarative ...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing Declarative ...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Declarative ...'
+            }
+        }
+    }
+}
+// Script //
 node {
-    echo "Hey I am from the Jenkinsfile!"
+    stage('Build') {
+        echo 'Building Script ...'
+    }
+    stage('Test') {
+        echo 'Testing Script ...'
+    }
+    stage('Deploy') {
+        echo 'Deploying Script ...'
+    }
 }
