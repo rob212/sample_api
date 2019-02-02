@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo 'Building Declarative ...'
                 sh ("cp ci/container/Dockerfile .")
+                sh ("cp requirements.txt .")
                 sh ("docker build -t sample_api --pull ." )
             }
         }
