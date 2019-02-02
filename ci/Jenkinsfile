@@ -9,6 +9,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Declarative ...'
+                sh ("cp ci/container/Dockerfile .")
+                sh ("docker build -t sample_api --pull ." )
             }
         }
         stage('Test') {
