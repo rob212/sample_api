@@ -1,0 +1,5 @@
+#!/usr/bin/env groovy
+
+node {
+    echo "Hey I am from the Jenkinsfile!"
+}
