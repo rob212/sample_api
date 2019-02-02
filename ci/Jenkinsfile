@@ -1,6 +1,28 @@
 #!/usr/bin/env groovy
 
 
+// Declarative //
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building Declarative ...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing Declarative ...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Declarative ...'
+            }
+        }
+    }
+}
 
 // Script //
 node {
