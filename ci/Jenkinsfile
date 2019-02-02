@@ -1,42 +1,19 @@
 #!/usr/bin/env groovy
 
 
-// Declarative //
-pipeline {
-    agent {
-        dockerfile true
-        }
+node {
+checkout scm
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building Declarative ...'
+   stage('Build') {
+      echo 'Building Script ...'
+     }
 
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing Declarative ...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying Declarative ...'
-            }
-        }
+     stage('Test') {
+        echo 'Testing Script ...'
+     }
+
+     stage('Deploy') {
+        echo 'Deploying Script ...'
     }
-}
 
-// Script //
-// node {
-// checkout scm
-   // stage('Build') {
-     //   echo 'Building Script ...'
-    // }
-    // stage('Test') {
-      //  echo 'Testing Script ...'
-    // }
-    // stage('Deploy') {
-     //    echo 'Deploying Script ...'
-    // }
-// }
+}
