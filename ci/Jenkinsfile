@@ -3,15 +3,15 @@
 
 // Declarative //
 pipeline {
-    agent any
+    agent {
+        docker { dockerfile true }
+    }
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building Declarative ...'
-                sh ("cp ci/container/Dockerfile .")
-                sh ("cp requirements.txt .")
-                sh ("docker build -t sample_api --pull ." )
+
             }
         }
         stage('Test') {
@@ -28,15 +28,15 @@ pipeline {
 }
 
 // Script //
-node {
-checkout scm
-    stage('Build') {
-        echo 'Building Script ...'
-    }
-    stage('Test') {
-        echo 'Testing Script ...'
-    }
-    stage('Deploy') {
-        echo 'Deploying Script ...'
-    }
-}
+// node {
+// checkout scm
+   // stage('Build') {
+     //   echo 'Building Script ...'
+    // }
+    // stage('Test') {
+      //  echo 'Testing Script ...'
+    // }
+    // stage('Deploy') {
+     //    echo 'Deploying Script ...'
+    // }
+// }
