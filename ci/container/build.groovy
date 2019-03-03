@@ -13,7 +13,7 @@ def imageGroup
 def propertiesFile = "ci/config/build/config.json"
 def containerRegistry
 
-node('loopback'){
+node {
     stage('setup'){
         checkout scm
         props = readJSON file: propertiesFile
