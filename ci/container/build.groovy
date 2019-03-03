@@ -36,7 +36,7 @@ try {
     node(buildNode) {
         stage('build image') {
         checkout scm
-            sh ("cp ci/container/Dockerfile .")
+          //  sh ("cp ci/container/Dockerfile .")
             sh ("docker build -t ${imageName} --pull ." )
             image = docker.image("${imageName}")
         }
