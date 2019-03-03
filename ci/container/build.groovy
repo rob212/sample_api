@@ -21,7 +21,7 @@ node {
         imageGroup = props.imageGroup
         imageTag = "${env.BUILD_NUMBER}"
         jenkinsDeployJob = props.jenkinsDeployJob
-        buildNode = props.buildNode
+       // buildNode = props.buildNode
         unitTestCmd = props.unitTestCmd
         unitTestOutFile = props.unitTestOutFile
         unitTestFailThreshold = props.unitTestFailThreshold
@@ -33,7 +33,7 @@ node {
 }
 
 // try {
-    node(buildNode) {
+    node {
         stage('build image') {
         checkout scm
           //  sh ("cp ci/container/Dockerfile .")
