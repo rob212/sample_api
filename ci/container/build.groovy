@@ -36,7 +36,7 @@ node {
     node {
         stage('build image') {
         checkout scm
-            def image = docker.build("${imageName}:${env.BUILD_ID}", "--pull .")
+            image = docker.build("${imageName}:${env.BUILD_ID}", "--pull .")
         }
 
       //  stage('unit tests') {
