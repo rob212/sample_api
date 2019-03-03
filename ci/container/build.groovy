@@ -41,19 +41,19 @@ try {
             image = docker.image("${imageName}")
         }
 
-        stage('unit tests') {
-            if( unitTestCmd != null ) {
-                image.inside {
-                    sh(unitTestCmd)
-                }
-            }
-        }
+      //  stage('unit tests') {
+        //    if( unitTestCmd != null ) {
+          //      image.inside {
+            //        sh(unitTestCmd)
+              //  }
+            //}
+        //}
     }
 } catch(RuntimeException e) {
     if(e.getMessage() != 'Some tests failed' && e.getMessage() != 'Some tests returned errors') {
-        throw new RuntimeException(e)
+        throw new RuntimeException(e);
     } catch(Exception e) {
-        throw new Exception(e)
+        throw new Exception(e);
     } finally {
         // put some notifications in here
     }
