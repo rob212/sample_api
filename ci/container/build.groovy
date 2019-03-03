@@ -32,7 +32,7 @@ node('loopback'){
     }
 }
 
-try {
+// try {
     node(buildNode) {
         stage('build image') {
         checkout scm
@@ -49,7 +49,7 @@ try {
             //}
         //}
     }
-} catch(RuntimeException e) {
+/*} catch(RuntimeException e) {
     if(e.getMessage() != 'Some tests failed' && e.getMessage() != 'Some tests returned errors') {
         throw new RuntimeException(e);
     } catch(Exception e) {
@@ -57,4 +57,4 @@ try {
     } finally {
         // put some notifications in here
     }
-}
+} */
