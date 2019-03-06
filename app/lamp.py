@@ -6,8 +6,4 @@ def get_lamp():
         'hello': 'world',
         'number': 5
     }
-    return _jsonify(data)
-
-
-def _jsonify(data):
     return json.dumps(data)

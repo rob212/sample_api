@@ -39,13 +39,13 @@ node {
             image = docker.build("${imageName}:${env.BUILD_ID}", "--pull .")
         }
 
-      //  stage('unit tests') {
-        //    if( unitTestCmd != null ) {
-          //      image.inside {
-            //        sh(unitTestCmd)
-              //  }
-            //}
-        //}
+        stage('unit tests') {
+            if( unitTestCmd != null ) {
+               image.inside {
+                  sh(unitTestCmd)
+                }
+            }
+        }
     }
 /*} catch(RuntimeException e) {
     if(e.getMessage() != 'Some tests failed' && e.getMessage() != 'Some tests returned errors') {
