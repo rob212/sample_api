@@ -43,7 +43,7 @@ node {
             if( unitTestCmd != null ) {
             print('unit test cmd: '+unitTestCmd)
                image.inside {
-                  // sh(unitTestCmd)
+                  sh(unitTestCmd)
                   print('unit test cmd inside the docker container : '+unitTestCmd)
                 }
             }
