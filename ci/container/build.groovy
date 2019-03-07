@@ -42,9 +42,10 @@ node {
         stage('unit tests') {
             if( unitTestCmd != null ) {
             print('unit test cmd: '+unitTestCmd)
-             //  image.inside {
-               //   sh(unitTestCmd)
-                //}
+               image.inside {
+                  // sh(unitTestCmd)
+                  print('unit test cmd inside the docker container : '+unitTestCmd)
+                }
             }
         }
     }
