@@ -15,4 +15,4 @@ EXPOSE 5000
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "app.py" ]
+CMD [ "autoapp.py" ]
