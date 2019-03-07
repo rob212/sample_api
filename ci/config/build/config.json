@@ -4,7 +4,7 @@
   "jenkinsDeployJob": "deploy_sample_api",
   "buildNode": "dev-build",
   "containerRegistry": "",
-  "unitTestCmd": "pytest  --junit=unitpytests.xml --cov=/usr/lib/python3.6/site-packages/app --cov-report=html",
+  "unitTestCmd": "pytest",
   "unitTestOutfile": "unitpytests.xml",
   "unitTestFailThreshold": "0",
   "unitTestCoverageOutfile": "index.html",
