@@ -41,9 +41,10 @@ node {
 
         stage('unit tests') {
             if( unitTestCmd != null ) {
-               image.inside {
-                  sh(unitTestCmd)
-                }
+            print('unit test cmd')
+             //  image.inside {
+               //   sh(unitTestCmd)
+                //}
             }
         }
     }
