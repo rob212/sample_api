@@ -33,7 +33,7 @@ node {
 }
 
 // try {
-    node {
+    node('docker') {
         stage('build image') {
         checkout scm
             image = docker.build("${imageName}:${env.BUILD_ID}", "--pull .")
